@@ -1,0 +1,92 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
+  "name": "llnotes",
+  "word": "tag",
+  "rules": {
+    "note": {
+      "type": "REPEAT",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "_empty_line"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "tag_line"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "desc_line"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "text_block"
+          }
+        ]
+      }
+    },
+    "_empty_line": {
+      "type": "PATTERN",
+      "value": "\\n"
+    },
+    "tag_line": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "%"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "tag"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": ","
+              },
+              {
+                "type": "SYMBOL",
+                "name": "tag"
+              }
+            ]
+          }
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\n"
+        }
+      ]
+    },
+    "tag": {
+      "type": "PATTERN",
+      "value": "[a-zA-Z][a-zA-Z0-9\\-/]*"
+    },
+    "desc_line": {
+      "type": "PATTERN",
+      "value": "#.*\\n"
+    },
+    "text_block": {
+      "type": "PATTERN",
+      "value": "[^#%\\n].*\\n"
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": [],
+  "reserved": {}
+}

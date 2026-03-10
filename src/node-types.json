@@ -1,0 +1,61 @@
+[
+  {
+    "type": "note",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "desc_line",
+          "named": true
+        },
+        {
+          "type": "tag_line",
+          "named": true
+        },
+        {
+          "type": "text_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tag_line",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "tag",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "%",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "desc_line",
+    "named": true
+  },
+  {
+    "type": "tag",
+    "named": true
+  },
+  {
+    "type": "text_block",
+    "named": true
+  }
+]

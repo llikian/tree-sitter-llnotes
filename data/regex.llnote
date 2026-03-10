@@ -1,0 +1,21 @@
+% regex, regex/character-class, regex/dot, regex/wildcard, regex 
+# any character but newline, equivalent to [^\n]
+.
+
+% regex
+# word, equivalent to [a-zA-Z0-9_]
+\w
+# NOT a word, equivalent to [^a-zA-Z0-9_]
+\W
+
+% regex
+# digit, equivalent to [0-9]
+\d
+# NOT a digit, equivalent to [^0-9]
+\D
+
+% regex
+# whitespace, equivalent to [ \n\r\t\f]
+\s
+# NOT whitespace
+\S

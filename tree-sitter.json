@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "llnotes",
+      "camelcase": "llnotes",
+      "title": "llikian's notes",
+      "scope": "source.llnotes",
+      "file-types": [
+        "llnote"
+      ],
+      "injection-regex": "^llnotes$",
+      "class-name": "TreeSitterLlnotes"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "A small language for my note files.",
+    "authors": [
+      {
+        "name": "llikian",
+        "url": "https://github.com/llikian"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/llikian/tree-sitter-llnotes"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
