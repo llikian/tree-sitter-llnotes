@@ -10,7 +10,8 @@
         "llnote"
       ],
       "injection-regex": "^llnotes$",
-      "class-name": "TreeSitterLlnotes"
+      "class-name": "TreeSitterLlnotes",
+      "highlights": "queries/highlights.scm"
     }
   ],
   "metadata": {
