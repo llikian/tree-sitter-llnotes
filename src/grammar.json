@@ -6,17 +6,8 @@
     "note": {
       "type": "REPEAT",
       "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SYMBOL",
-            "name": "_empty_line"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "note_block"
-          }
-        ]
+        "type": "SYMBOL",
+        "name": "note_block"
       }
     },
     "note_block": {
@@ -43,10 +34,6 @@
           }
         }
       ]
-    },
-    "_empty_line": {
-      "type": "PATTERN",
-      "value": "\\n"
     },
     "tag_line": {
       "type": "SEQ",
