@@ -24,6 +24,7 @@ module.exports = grammar({
       $.tag_line,
       repeat(
         choice(
+          $._empty_line,
           $.desc_line,
           $.text_block,
         ),
