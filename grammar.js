@@ -13,12 +13,7 @@ module.exports = grammar({
   word: $ => $.tag,
 
   rules: {
-    note: $ => repeat(
-      choice(
-        $._empty_line,
-        $.note_block,
-      ),
-    ),
+    note: $ => repeat($.note_block),
 
     note_block: $ => seq(
       $.tag_line,
