@@ -16,10 +16,18 @@ module.exports = grammar({
     note: $ => repeat(
       choice(
         $._empty_line,
-        $.tag_line,
-        $.desc_line,
-        $.text_block,
-      )
+        $.note_block,
+      ),
+    ),
+
+    note_block: $ => seq(
+      $.tag_line,
+      repeat(
+        choice(
+          $.desc_line,
+          $.text_block,
+        ),
+      ),
     ),
 
     _empty_line: _ => /\n/,

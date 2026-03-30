@@ -9,6 +9,21 @@
       "required": false,
       "types": [
         {
+          "type": "note_block",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "note_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
           "type": "desc_line",
           "named": true
         },

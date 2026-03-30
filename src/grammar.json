@@ -14,18 +14,35 @@
           },
           {
             "type": "SYMBOL",
-            "name": "tag_line"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "desc_line"
-          },
-          {
-            "type": "SYMBOL",
-            "name": "text_block"
+            "name": "note_block"
           }
         ]
       }
+    },
+    "note_block": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "tag_line"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "desc_line"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "text_block"
+              }
+            ]
+          }
+        }
+      ]
     },
     "_empty_line": {
       "type": "PATTERN",

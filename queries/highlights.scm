@@ -1,3 +1,5 @@
+(note_block) @local.scope
+
 (tag_line "%" @punctuation.special)
 (tag_line "," @punctuation.delimiter)
 (tag_line (tag) @tag)
